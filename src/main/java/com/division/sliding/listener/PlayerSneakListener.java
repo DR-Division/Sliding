@@ -53,7 +53,7 @@ public class PlayerSneakListener implements Listener {
         Location to = event.getTo();
         Location from = event.getFrom();
         Player p = event.getPlayer();
-        if (to != null && to.getY() - from.getY() > 0) {
+        if (to != null && to.getY() - from.getY() > 0 && data.getPlayerData(p.getUniqueId()).getTaskID() != -1) {
             SlidingUtil.stopSliding(p.getUniqueId(), data.getPlayerData(p.getUniqueId()));
             p.setVelocity(new Vector(0,0,0));
         }
