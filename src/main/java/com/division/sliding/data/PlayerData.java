@@ -5,11 +5,13 @@ public class PlayerData {
     private int taskID;
     private long lastSneakTime;
     private long lastSlideTime;
+    private String direction;
 
     public PlayerData() {
         taskID = -1;
         lastSneakTime = -1;
         lastSlideTime = -1;
+        direction = null;
     }
 
     public int getTaskID() {
@@ -36,6 +38,13 @@ public class PlayerData {
         this.lastSlideTime = lastSlideTime;
     }
 
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
 
 
 }

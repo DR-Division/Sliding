@@ -11,8 +11,12 @@ public class SlidingUtil {
     public static void stopSliding(UUID uuid, PlayerData data) {
         Bukkit.getScheduler().cancelTask(data.getTaskID());
         Player p = Bukkit.getPlayer(uuid);
-        if (p != null)
+        if (p != null) {
             p.setGliding(false);
+            p.setSneaking(false);
+        }
         data.setTaskID(-1);
+        data.setDirection(null);
+
     }
 }
