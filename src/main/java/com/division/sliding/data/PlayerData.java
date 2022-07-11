@@ -4,6 +4,13 @@ public class PlayerData {
 
     private int taskID;
     private long lastSneakTime;
+    private long lastSlideTime;
+
+    public PlayerData() {
+        taskID = -1;
+        lastSneakTime = -1;
+        lastSlideTime = -1;
+    }
 
     public int getTaskID() {
         return taskID;
@@ -20,5 +27,15 @@ public class PlayerData {
     public void setLastSneakTime(long lastSneakTime) {
         this.lastSneakTime = lastSneakTime;
     }
+
+    public long getLastSlideTime() {
+        return lastSlideTime;
+    }
+
+    public void setLastSlideTime(long lastSlideTime) {
+        this.lastSlideTime = lastSlideTime;
+    }
+
+
 
 }

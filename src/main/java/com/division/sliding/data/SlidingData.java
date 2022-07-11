@@ -6,11 +6,15 @@ public class SlidingData {
 
     private int distance;
     private int time;
+    private long sneakInterval;
+    private long slideDelay;
     private final Map<UUID, PlayerData> playerDataMap;
+    private boolean requireRunning;
 
     public SlidingData() {
         distance = 0;
         time = 0;
+        sneakInterval = 0;
         playerDataMap = new HashMap<>();
     }
 
@@ -30,6 +34,32 @@ public class SlidingData {
         this.time = time;
     }
 
+    public long getSneakInterval() {
+        return sneakInterval;
+    }
+
+    public void setSneakInterval(long sneakInterval) {
+        this.sneakInterval = sneakInterval;
+    }
+
+    public long getSlideDelay() {
+        return slideDelay;
+    }
+
+    public void setSlideDelay(long slideDelay) {
+        this.slideDelay = slideDelay;
+    }
+
+    public boolean isRequireRunning() {
+        return requireRunning;
+    }
+
+    public void setRequireRunning(boolean requireRunning) {
+        this.requireRunning = requireRunning;
+    }
+
+
+
     public PlayerData getPlayerData(UUID uuid) {
         if (playerDataMap.containsKey(uuid))
             return playerDataMap.get(uuid);
@@ -39,6 +69,7 @@ public class SlidingData {
             return data;
         }
     }
+
 
     public Collection<PlayerData> getAllPlayersData() {
         return playerDataMap.values();

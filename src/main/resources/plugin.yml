@@ -3,3 +3,7 @@ version: '${project.version}'
 main: com.division.sliding.Sliding
 api-version: 1.13
 authors: [ Reincarnation__ ]
+
+commands:
+  sliding:
+    aliases: [슬라이딩]

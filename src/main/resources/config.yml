@@ -1,2 +1,5 @@
-sliding-distance: 5 #distance block
-sliding-time: 20 #sliding tick
+sliding-distance: 3 #distance block
+sliding-time: 10 #sliding tick
+sneak-interval: 500 #0.5s (1000 = 1s)
+sliding-delay: 2000 #2.0s
+require-running: true
